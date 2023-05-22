@@ -42,7 +42,6 @@ function numeroMaiorMenor (numero) {
 
 document.body.addEventListener('click', (e) => {
     if(e.target.id == 'botao') {
-        console.log(e)
         location.reload()
     }
 })
