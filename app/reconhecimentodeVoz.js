@@ -1,21 +1,20 @@
+const elementoChute = document.querySelector('#chute')
+
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
 recognition.lang = 'pt-Br'
 recognition.start()
 
-/**recognition.addEventListener('result', (event) => {
-    console.log(event)
-}) */
-
 recognition.addEventListener('result', onSpeak)
 
 function onSpeak(e) {
-    const box = document.querySelector('.box')
-    const fala = e.results[0][0].transcript
-    box.innerHTML = fala
-
-    if(fala == numeroSecreto) {
-        alert('faz o l')
-    }
+    chute = e.results[0][0].transcript
+    elementoChute.innerHTML = `
+        <div>Você disse:</div>
+        <span class="box">${chute}</span>
+    `
+    validarChute(chute)
 }
+
+recognition.addEventListener('end', () => recognition.start())

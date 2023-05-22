@@ -23,6 +23,10 @@ h1 {
     font-size: 5em;
 }
 
+h2 {
+    font-size: 4em;
+}
+
 h3 {
     font-size: 2em;
     margin-top: 20px;
@@ -35,6 +39,7 @@ span {
 .mensagem {
     font-size: 1.5em;
     margin-top: 40px;
+    font-weight: 600;
 }
 
 .box {
@@ -43,4 +48,23 @@ span {
     font-size: 4em;
     padding: 10px;
     margin: 20px;
+}
+
+
+.jgrnovamente {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    cursor: pointer;
+    box-shadow: 0px 1px 20px -6px var(--primary-color);
+    transition: .9s;
+}
+
+.jgrnovamente:hover {
+    font-weight: bolder;
+    padding: 15px 90px;
+    box-shadow: 0px 1px 50px -6px var(--primary-color);
 }
